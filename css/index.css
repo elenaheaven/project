@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+header {
+    background-color: #2D2D2D;
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+}
+
+body {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    min-height: 100vh;
+    position: relative
+}
+
+/*Background*/
+
+.dark-bg {
+     background: #2D2D2D;
+}
+
+.yellow-bg {
+     background: #FBBA00; 
+}
+
+
+.sect-container {
+    padding: 150px;
+}
+
+.titles {
+    font-size: 55px;
+	text-transform: uppercase;
+	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+
+/*Top Menu*/
+
+.topmenu {
+	overflow: hidden;
+	float: right;
+    margin-right: 100px;
+    
+}
+
+.navbar {
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.topmenu li {
+	float: left;
+	list-style: none;
+}
+
+.topmenu li a {
+	font-size: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 30px;
+	color: #fff;
+}
+
+.topmenu li a:hover {
+	color: #FBBA00;
+}
+
+.toplogo {
+    float: left;
+    margin-left: 100px;
+}
+
+
+/*Poslugy*/
+
+.poslugy {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.poslugy > div > img {
+    width: 100px;
+    height: 100px;
+}
+
+/*Preview Portfolio*/
+
+.portfolio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+/*Footer*/
+
+.city-view {
+    position: absolute;
+    bottom: 0
+}
