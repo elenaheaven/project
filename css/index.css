@@ -1,19 +1,51 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,500,700,900');
 
 header {
     background-color: #2D2D2D;
     height: 75px;
-    width: 100%;
+    right: 0;
+    left: 0;
     position: fixed;
     z-index: 9999;
+    top: 0;
+    padding-right: 100px;
+    padding-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-h1, h2, p {
-    font-family: 'Roboto', sans-serif;
+/*Fonts*/
+
+h1 {
+    font-weight: 900;
+    font-size: 2.5em;
+    text-transform: uppercase;
+	font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    padding-bottom: 100px;
 }
+
+@media screen and (min-width: 768px) {
+    h1 {
+    font-size: 3.5em;
+    }
+}
+
+
+h2 {
+    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+}
+
 
 main {
     text-align: center;
+    margin-top: 75px;
 }
 
 footer {
@@ -42,57 +74,79 @@ footer {
     color: #FBBA00;
 }
 
+.grey-text {
+    color: #2D2D2D;
+}
+
+.black-text {
+    color: #000;
+}
+
 .sect-container {
-    padding: 150px;
+    padding: 100px;
+    min-height: 50vh;
 }
-
-.titles {
-    font-size: 55px;
-	text-transform: uppercase;
-	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    padding-bottom: 100px;
-}
-
 
 /*Top Menu*/
 
 .topmenu {
-	overflow: hidden;
-	float: right;
-    margin-right: 100px;
-    
+    display: block;
 }
 
-.navbar {
+.topmenu > ul {
     height: 75px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
 }
 
-.topmenu li {
-	float: left;
+.topmenu > ul li {
 	list-style: none;
 }
 
-.topmenu li a {
-	font-size: 24px;
+.topmenu > ul li a {
+	font-size: 18px;
+    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 0 30px;
 	color: #fff;
 }
 
-.topmenu li a:hover {
+.topmenu > ul li a:hover {
 	color: #FBBA00;
 }
 
-.toplogo {
-    float: left;
-    margin-left: 100px;
+.toplogo img {
+    width: auto;
+    height: 50px
 }
 
-.toplogo img {
-    width: 80%;
+
+/*First screen*/
+
+.first-screen {
+    min-height: 100vh;
+    background: url('/img/dot-grid.png') center center fixed, #FBBA00;
+    /*background-color: #FBBA00;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: 900;
+    font-size: 12em;
+    text-transform: uppercase;
+    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    /*padding: 200px 0;*/
+    color: #fff;
+}
+
+.gaslo {
+    margin-top: -20px;
 }
 
 
@@ -103,6 +157,15 @@ footer {
     align-items: flex-start;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.parallax {
+    background-image: url('/img/background2.jpg');
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .services > div > img {
@@ -122,17 +185,44 @@ footer {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 
 /*Button*/
+
+.scrollbottom {
+    width: 50px;
+    height: 50px;
+}
+
+.sm-button {
+    border-radius: 50px;
+    color: #FBBA00;
+    cursor: pointer;
+    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 8px 50px;
+    border: 3px solid #FBBA00;
+    transition: all 0.35s ease;
+    
+}
+
+.sm-button:hover {
+    color: #000;
+    text-decoration: none;
+    background-color: #FBBA00;
+}
+
 
 .grey-button {
     background: #333;
 	border-radius: 15px;
 	color: #555;
 	cursor: pointer;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 1.5em;
 	text-transform: uppercase;
 	margin: auto;
