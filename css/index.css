@@ -128,7 +128,7 @@ footer {
 
 .first-screen {
     min-height: 100vh;
-    background: url('/img/dot-grid.png') center center fixed, #FBBA00;
+    background: url("/img/dot-grid.png") center center fixed, #FBBA00;
     /*background-color: #FBBA00;*/
     display: flex;
     align-items: center;
