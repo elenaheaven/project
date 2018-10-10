@@ -10,7 +10,9 @@ header {
     top: 0;
     padding-right: 100px;
     padding-left: 100px;
+    transition: background-color .35s ease;
 }
+
 
 body {
     max-width: 1680px;
@@ -36,7 +38,7 @@ h1 {
 
 
 h2 {
-    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 700;
     font-size: 1.5em;
 }
@@ -101,11 +103,13 @@ main {
 }
 
 
+
 /*Top Menu*/
 
 .menu {
     max-width: 1680px;
-    margin: 0 auto; 
+    /*width: 100%;*/
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -114,6 +118,7 @@ main {
 .topmenu {
     display: block;
 }
+
 
 .topmenu > ul {
     height: 75px;
@@ -125,16 +130,17 @@ main {
 
 .topmenu > ul li {
 	list-style: none;
+	font-weight: 700;
+	font-size: 18px;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
 }
 
 .topmenu > ul li a {
-	font-size: 18px;
-    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 0 30px;
 	color: #fff;
-	font-weight: 700;
 	transition: all 0.35s ease;
 }
 
@@ -152,7 +158,8 @@ main {
 
 .first-screen {
     min-height: 100vh;
-    background: url('./../img/dot-grid.png') center center fixed, #FBBA00;
+    background: radial-gradient(rgba(0,0,0,.2) 6px, transparent 6px) center center fixed, #FBBA00;
+	 	background-size: 36px 36px, cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,7 +168,7 @@ main {
 
 .name {
     font-weight: 900;
-    font-size: 5.5em;
+    font-size: 5em;
     text-transform: uppercase;
     font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     color: #fff;
@@ -190,6 +197,7 @@ main {
     flex-wrap: wrap;
     margin-top: 100px;
 }
+
 
 .photo-effect {
     background-image: url('./../img/background-par3.jpg');
@@ -308,12 +316,29 @@ main {
     background-color: #000;
 }
 
+.scrolltop {
+	width: 50px;
+  height: 50px;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	border: 3px solid #FBBA00;
+	border-radius: 9px;
+	transform: rotateZ(180deg);
+	display: none;
+	cursor: pointer;
+	transition: all .5s ease;
+}
+
+
+
 
 /*Footer*/
 
 footer {
-    min-height: 100vh;
+    min-height: calc(100vh - 75px);
     position: relative;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -321,8 +346,6 @@ footer {
     background: url('./../img/city_grey.png') no-repeat center bottom, linear-gradient(#f5f7fa, #c3cfe2);
     background-blend-mode: unset;
     background-size: 100%;
-    box-sizing: border-box;
-    padding-top: 100px;
 }
 
 .contacts {
@@ -334,9 +357,15 @@ footer {
 
 .footer-contacts {
     margin-bottom: 50px;
+    position: relative;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.footer-contacts a {
+.footer-contacts > a {
     display: block;
     font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 700;
@@ -349,17 +378,32 @@ footer {
     transition: all 0.35s ease;
 }
 
-.footer-contacts a:hover {
+
+
+.footer-contacts > a:hover {
     color: #FBBA00;
 }
 
 /*Form*/
 
+.form-button {
+	padding-top: 15px;
+}
+
+
 .form {
     background: #000;
     padding: 25px;
-    border-radius: 25px;
+    border-radius: 30px;
+    width: 325px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .form {
     width: 400px;
+    }
 }
 
 .form input {
@@ -392,26 +436,15 @@ footer {
     background: #FBBA00;
 }
 
+/*Footer social*/
 
-.footer-social {
-    /*background: red;*/
-    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 15px 100px;
-    color: #8d8d8d;
-}
 
 .social {
     font-size: 1.6em;
     display: flex;
     justify-content: space-between;
-    flex-direction:row;
+    flex-direction: row;
+
 }
 
 .social a {
@@ -423,4 +456,27 @@ footer {
 .social a:hover {
     color: #fff;
     text-decoration: none;
+}
+
+.footer-social {
+    /*background: red;*/
+    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 10px 30px;
+    color: #8d8d8d;
+}
+
+
+@media screen and (min-width: 768px) {
+    .footer-social  {
+    padding: 15px 100px;
+    }
 }

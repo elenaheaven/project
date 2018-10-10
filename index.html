@@ -11,7 +11,7 @@
     <title>:KRAPKA</title>
 </head>
 
-<body>
+<body id="body">
     <header>
         <div class="menu">
             <div class="toplogo">
@@ -157,29 +157,29 @@
         <div class="footer-contacts">
             <a href="tel:+0679992091">(067) 999 20 91</a>
             <a href="mailto:email@gmail.com">email@gmail.com</a>
-        </div>
-        <!--Accordion-->
-        <div class="uk-accordion uk-text-center" data-uk-accordion="{showfirst  : false}">
-            <a href="#" class="uk-accordion-title sm-button-black">Напишіть нам
+            <!--Accordion-->
+            <div class="form-button uk-accordion uk-text-center" data-uk-accordion="{showfirst  : false}">
+                <a href="#" class="uk-accordion-title sm-button-black">Напишіть нам
                     </a>
-            <div class="uk-accordion-content">
-                <div class="contact smooth" id="contact_me">
-                    <div class="form">
-                        <!--<h2>Напишіть нам</h2>-->
-                        <form action="#" method="POST">
-                            <p>
-                                <input type="text" id="name" name="name" placeholder="Ім’я">
-                            </p>
-                            <p>
-                                <input type="e-mail" id="e-mail" name="e-mail" placeholder="E-mail">
-                            </p>
-                            <p>
-                                <textarea placeholder="Повідомлення" rows="5"></textarea>
-                            </p>
-                            <p>
-                                <a href="#" class="sm-button">Надіслати</a>
-                            </p>
-                        </form>
+                <div class="uk-accordion-content uk-margin-large-bottom">
+                    <div class="contact smooth" id="contact_me">
+                        <div class="form">
+                            <!--<h2>Напишіть нам</h2>-->
+                            <form action="#" method="POST">
+                                <p>
+                                    <input type="text" id="name" name="name" placeholder="Ім’я">
+                                </p>
+                                <p>
+                                    <input type="email" id="email" name="email" placeholder="E-mail">
+                                </p>
+                                <p>
+                                    <textarea placeholder="Повідомлення" rows="5"></textarea>
+                                </p>
+                                <p>
+                                    <a href="#" class="sm-button">Надіслати</a>
+                                </p>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,8 +196,15 @@
             </div>
         </div>
     </footer>
+    <div class="scrolltop">
+    	<a href="#body">
+    	<img class="scrollbottom" src="img/go-down.svg" alt="Кнопка вверх">
+    	</a>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/uikit.min.js"></script>
     <script src="js/accordion.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
