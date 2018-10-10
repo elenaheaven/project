@@ -158,13 +158,25 @@ main {
 
 .first-screen {
     min-height: 100vh;
-    background: radial-gradient(rgba(0,0,0,.2) 6px, transparent 6px) center center fixed, #FBBA00;
-	 	background-size: 36px 36px, cover;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    animation: movebg 4s ease forwards;
 }
+
+@keyframes movebg {
+    0% {
+        /*background: radial-gradient(rgba(0, 0, 0, .1) 6px, transparent 6px);*/
+    }
+
+    100% {
+        background: radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed, #FBBA00;
+        background-size: 36px 36px, cover;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+    }
+}
+
 
 .name {
     font-weight: 900;
