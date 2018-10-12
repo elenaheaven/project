@@ -5,29 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/js/font_loader.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/uikit.min.css" />
-    <link rel="stylesheet" href="css/accordion.min.css">
-    <link rel="stylesheet" href="css/birds.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="assets/css/accordion.min.css">
+    <link rel="stylesheet" href="assets/css/birds.css">
+    <link rel="stylesheet" href="assets/css/mobmenu.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <title>:KRAPKA</title>
 </head>
 
-<body id="body">
+<body>
     <header>
-        <div class="menu">
+        <div class="top-menu">
             <div class="toplogo">
-                <img src="img/logo-4.svg" alt="Лого Двокрапка">
+                <img src="assets/img/logo-4.svg" alt="Лого Двокрапка">
             </div>
-                <nav class="topmenu uk-hidden-small">
-                    <ul>
-                        <li><a href="#home">Головна</a></li>
-                        <li><a href="#portfolio">Портфоліо</a></li>
-                        <li><a href="#contacts">Контакти</a></li>
-                        <li><a href="#change-lang">UA</a></li>
-                    </ul>
-                    <!-- <li><a href="#change-lang">UA</a></li> -->
-                </nav>
+<!--             <div class="main-menu uk-hidden-small">
+                <ul class="menu-items">
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#portfolio">Портфоліо</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+                <ul class="change-language">
+                    <li><a href="#change-lang">UA</a></li>
+                </ul>
+            </div> -->
+            <div class="burger">
+                <img id="openMenu" src="assets/img/burger-menu.svg" alt="Бургер меню">
             </div>
+        </div>
     </header>
     <main>
         <section id="home" class="first-screen">
@@ -35,7 +41,7 @@
                 <span class="name">:KRAPKA</span>
                 <h1 class="gaslo grey-text">Проникливий дизайн...</h1>
                 <a href="#services">
-               <img class="scrollbottom" src="img/go-down.svg" alt="Вниз">
+               <img class="scrollbottom" src="assets/img/go-down.svg" alt="Вниз">
             </a>
             </div>
         </section>
@@ -43,21 +49,15 @@
             <h1 class="titles">:Вигадуємо. Розробляємо. Малюємо</h1>
             <div class="services uk-grid uk-grid-width-medium-1-3">
                 <div class="uk-margin-large-bottom">
-                    <figure class="uk-overlay el-hover">
-                        <img src="img/logodis.svg" alt="Фірмовий стиль">
-                        <h2 class="yellow-text">Логотипи</h2>
-                        <figcaption class="uk-overlay-panel overlay">
-                            <div>
-                                <h2>Назва проекту</h2>
-                            </div>
-                        </figcaption>
+                    <img src="assets/img/logodis.svg" alt="Фірмовий стиль">
+                    <h2 class="yellow-text">Логотипи</h2>
                 </div>
                 <div class="uk-margin-large-bottom">
-                    <img src="img/webdis.svg" alt="Розробка сайтів">
+                    <img src="assets/img/webdis.svg" alt="Розробка сайтів">
                     <h2 class="yellow-text">Сайти</h2>
                 </div>
                 <div class="uk-margin-large-bottom">
-                    <img src="img/advdis.svg" alt="Рекламний дизайн">
+                    <img src="assets/img/advdis.svg" alt="Рекламний дизайн">
                     <h2 class="yellow-text">Реклама</h2>
                 </div>
             </div>
@@ -146,7 +146,7 @@
         </div>
         <div class="sect-container yellow-bg">
             <h1 class="grey-text">:Трошки про нас</h1>
-            <!--<img src="img/graphic.png" alt="Графіка">-->
+            <!--<img src="assets/img/graphic.png" alt="Графіка">-->
             <div class="about-us-screen uk-text-left">
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -191,23 +191,21 @@
                 </div>
             </div>
         </div>
-
         <!-- Birds -->
-    <div>
-        <div class="bird-container bird-container--one">
-            <div class="bird bird--one"></div>
+        <div>
+            <div class="bird-container bird-container--one">
+                <div class="bird bird--one"></div>
+            </div>
+            <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+            </div>
+            <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+            </div>
+            <div class="bird-container bird-container--four">
+                <div class="bird bird--four"></div>
+            </div>
         </div>
-        <div class="bird-container bird-container--two">
-            <div class="bird bird--two"></div>
-        </div>
-        <div class="bird-container bird-container--three">
-            <div class="bird bird--three"></div>
-        </div>
-        <div class="bird-container bird-container--four">
-            <div class="bird bird--four"></div>
-        </div>
-    </div>
-
         <!--Footer Social-->
         <div id="contacts" class="footer-social">
             <div class="social">
@@ -220,13 +218,24 @@
             </div>
         </div>
     </footer>
-    <div id="goTop" class="scrolltop">
-    	<img src="img/go-top.svg" alt="Вгору">
+    <div class="mob-menu hide">
+        <div class="mob-menu-items">
+            <div class="toplogo uk-margin-top">
+                <img id="closeMenu" class="close-menu" src="assets/img/close-menu.svg" alt="Закриття меню">
+                <img src="assets/img/logo-4.svg" alt="Лого Двокрапка">
+            </div>
+                <a href="#home">Головна</a>
+                <a href="#portfolio">Портфоліо</a>
+                <a href="#contacts">Контакти</a>
+            </div>
+        </div>
+        <div id="goTop" class="scrolltop hide">
+            <img src="assets/img/go-top.svg" alt="Вгору">
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/uikit.min.js"></script>
-    <script src="js/accordion.min.js"></script>
-    <script src="js/index.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/uikit.min.js"></script>
+            <script src="assets/js/accordion.min.js"></script>
+            <script src="assets/js/index.js"></script>
 </body>
 
 </html>
