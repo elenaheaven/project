@@ -16,24 +16,45 @@
 
 <body>
     <header>
+        <!-- Top menu -->
         <div class="top-menu">
             <div class="toplogo">
                 <img src="assets/img/logo-4.svg" alt="Лого Двокрапка">
             </div>
-            <div class="main-menu uk-hidden-small">
-                <ul class="menu-items">
-                    <li><a href="#home">Головна</a></li>
-                    <li><a href="#portfolio">Портфоліо</a></li>
-                    <li><a href="#contacts">Контакти</a></li>
-                </ul>
-                <ul class="change-language">
-                    <li><a href="#change-lang">UA</a></li>
-                </ul>
+                <div class="main-menu uk-hidden-small">
+                    <ul class="menu-items">
+                        <li><a href="#home">Головна</a></li>
+                        <li><a href="#portfolio">Портфоліо</a></li>
+                        <li><a href="#contacts">Контакти</a></li>
+                    </ul>
+                    <ul class="change-language">
+                        <li><a href="#change-lang">UA</a></li>
+                    </ul>
+                </div>
+                <div class="burger uk-visible-small">
+                    <img id="openMenu" src="assets/img/burger-menu.svg" alt="Бургер меню">
             </div>
-            <div class="burger uk-visible-small">
-                <img id="openMenu" src="assets/img/burger-menu.svg" alt="Бургер меню">
-            </div>
-        </div>
+                </div>
+                <!-- Mob Menu -->
+                <div class="mob-menu hide">
+                    <div class="mob-menu-container">
+                        <div class="toplogo">
+                            <img id="closeMenu" class="close-menu" src="assets/img/close-menu.svg" alt="Закриття меню"/>
+                            <img src="assets/img/logo-4.svg" alt="Лого Двокрапка"/>
+                </div>
+                            <div class="mob-menu-items">
+                                <a href="#home">Головна</a>
+                                <a href="#portfolio">Портфоліо</a>
+                                <a href="#contacts">Контакти</a>
+                            </div>
+                            <div class="social-mob">
+                                <a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
+                                <a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
+                                <a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
     </header>
     <main>
         <section id="home" class="first-screen">
@@ -141,12 +162,11 @@
                         </div>
                     </div>
                 </section>
-                <a href="#" class="sm-button">Більше</a>
+                <a href="#" class="sm-button sm-yellow">Більше</a>
             </section>
         </div>
         <div class="sect-container yellow-bg">
             <h1 class="grey-text">:Трошки про нас</h1>
-            <!--<img src="assets/img/graphic.png" alt="Графіка">-->
             <div class="about-us-screen uk-text-left">
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -167,7 +187,7 @@
             <a href="mailto:email@gmail.com">email@gmail.com</a>
             <!--Accordion-->
             <div class="form-button uk-accordion uk-text-center" data-uk-accordion="{showfirst  : false}">
-                <a href="#" class="uk-accordion-title sm-button-black">Напишіть нам
+                <a href="#" class="uk-accordion-title sm-button sm-black">Напишіть нам
                     </a>
                 <div class="uk-accordion-content uk-margin-large-bottom">
                     <div class="contact smooth" id="contact_me">
@@ -183,7 +203,7 @@
                                     <textarea placeholder="Повідомлення" rows="5"></textarea>
                                 </p>
                                 <p>
-                                    <a href="#" class="sm-button">Надіслати</a>
+                                    <a href="#" class="sm-button sm-yellow">Надіслати</a>
                                 </p>
                             </form>
                         </div>
@@ -218,24 +238,13 @@
             </div>
         </div>
     </footer>
-    <div class="mob-menu hide">
-        <div class="mob-menu-items">
-            <div class="toplogo uk-margin-top">
-                <img id="closeMenu" class="close-menu" src="assets/img/close-menu.svg" alt="Закриття меню">
-                <img src="assets/img/logo-4.svg" alt="Лого Двокрапка">
-            </div>
-                <a href="#home">Головна</a>
-                <a href="#portfolio">Портфоліо</a>
-                <a href="#contacts">Контакти</a>
-            </div>
-        </div>
-        <div id="goTop" class="scrolltop hide">
-            <img src="assets/img/go-top.svg" alt="Вгору">
+    <div id="goTop" class="scrolltop hide">
+        <img src="assets/img/go-top.svg" alt="Вгору">
     </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/uikit.min.js"></script>
-            <script src="assets/js/accordion.min.js"></script>
-            <script src="assets/js/index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/uikit.min.js"></script>
+        <script src="assets/js/accordion.min.js"></script>
+        <script src="assets/js/index.js"></script>
 </body>
 
 </html>

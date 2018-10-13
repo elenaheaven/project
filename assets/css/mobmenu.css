@@ -16,22 +16,25 @@
 }
 
 
-.mob-menu-items {
+.mob-menu-container {
 		border-radius: 30px;
 		width: 80%;
 		height: 85%;
 		border: 3px solid #FBBA00;
 		display: flex;
+    justify-content: space-around;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
 }
+
 
 
 .mob-menu-items a {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px;
-    font-size: 18px;
+    padding: 25px 0;
+    font-size: 22px;
     font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     color: #fff;
     display: block;
@@ -39,10 +42,29 @@
     will-change: transform;
 }
 
-.close-menu{
+
+.social-mob {
+		width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+		align-items: center;
+
+}
+
+.social-mob a {
+		font-size: 2em;
+		color: #FBBA00;
+		display: block;
+}
+
+.close-menu {
 	position: absolute;
-	top: 5px;
-	right: 5px;
+	cursor: pointer;
+	top: 10px;
+	right: 10px;
+	height: 200%;
+	width: 200%;
 }
 
 .burger {

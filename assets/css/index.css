@@ -1,9 +1,4 @@
-/*Fonts*/
-/*@import url('https://fonts.googleapis.com/css?family=Raleway:200,500,700,900');*/
-
-
 h1 {
-    /*font-weight: 900;*/
     font-size: 2.5em;
     text-transform: uppercase;
     font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -16,10 +11,8 @@ h1 {
     }
 }
 
-
 h2 {
     font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    /*font-weight: 700;*/
     font-size: 1.5em;
 }
 
@@ -31,18 +24,17 @@ h2 {
 
 p {
     font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    /*font-weight: 500;*/
     margin-top: 0;
 }
 
 /*Document*/
+
 html,
 body {
     margin: 0 auto;
     max-width: 1680px;
     overflow-x: hidden;
 }
-
 
 main {
     margin-top: 75px;
@@ -71,8 +63,7 @@ header {
     }
 }
 
-
-
+/*For outlines*/
 
 a {
     outline: 0;
@@ -122,34 +113,21 @@ a:hover {
     }
 }
 
-
-
 /*Top Menu*/
 
 .top-menu {
-		width: 100%;
+    width: 100%;
     max-width: 1680px;
     margin: 0 auto;
     display: flex;
-    /*flex-direction: row;*/
     align-items: center;
     justify-content: space-between;
 }
-
-/*@media screen and (min-width: 768px) {
-    .top-menu {
-        flex-direction: none;
-        align-items: center;
-
-    }
-}*/
-
 
 .toplogo img {
     height: 40px;
     width: auto;
 }
-
 
 .main-menu {
     display: flex;
@@ -157,12 +135,8 @@ a:hover {
     justify-content: center;
 }
 
-
 .main-menu li {
     list-style: none;
-    font-size: 18px;
-    font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-
 }
 
 .main-menu li a {
@@ -171,8 +145,10 @@ a:hover {
     padding: 0 30px;
     color: #fff;
     display: block;
-    transition: all 0.35s ease;
+    transition: transform 0.5s, color 0.3s ease;
     will-change: transform;
+    font-size: 18px;
+    font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .main-menu li a:hover {
@@ -189,6 +165,7 @@ a:hover {
 }
 
 /*Top menu effect on scroll*/
+
 .menu-fixed {
     background-color: #2D2D2D;
 }
@@ -196,7 +173,6 @@ a:hover {
 .menu-scroll {
     background-color: rgba(45, 45, 45, .8);
 }
-
 
 /*First screen*/
 
@@ -206,23 +182,10 @@ a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: movebg 4s ease forwards;
     background: radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed, #FBBA00;
     background-size: 36px 36px, cover;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
 }
-
-/*@keyframes movebg {
-    0% {
-    }
-
-    100% {
-        background: radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed, #FBBA00;
-        background-size: 36px 36px, cover;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
-    }
-}*/
-
 
 .name {
     font-size: 5em;
@@ -241,8 +204,8 @@ a:hover {
     margin-top: -20px;
 }
 
-
 /*Services*/
+
 .services {
     display: flex;
     align-items: flex-start;
@@ -250,7 +213,6 @@ a:hover {
     flex-wrap: wrap;
     padding-top: 100px;
 }
-
 
 .photo-effect {
     background: url('./../img/background-par3.jpg') no-repeat center center fixed;
@@ -275,7 +237,6 @@ a:hover {
     cursor: pointer
 }
 
-
 /*Preview Portfolio*/
 
 .portfolio-container {
@@ -285,7 +246,6 @@ a:hover {
     flex-wrap: wrap;
     margin-bottom: 50px;
 }
-
 
 /*About Us*/
 
@@ -315,49 +275,66 @@ a:hover {
     }
 }
 
-
 /*Button*/
 
 .scrollbottom {
     width: 50px;
     height: 50px;
-}
-
-.scrollbottom {
-    width: 50px;
-    height: 50px;
     will-change: transform;
-    /*transition: transform .5s ease;*/
-    animation: scrollbottom 1.5s cubic-bezier(.85, .15, .84, .56) infinite;
+    animation: sb_animate 2s infinite;
 }
 
 .scrollbottom:hover {
     animation-play-state: paused;
 }
 
-/*@keyframes scrollbottom {
-
-    0%, 20% {
+@keyframes sb_animate {
+    0% {
         transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(10px);
     }
 
     50% {
-        transform: translateY(20px);
-    }
-}*/
-
-@keyframes scrollbottom {
-    from {
         transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(10px);
     }
 }
 
-
 .sm-button {
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 8px 45px;
+    border-radius: 50px;
+    transition: all 0.35s ease;
+    display: inline-block;
+}
+
+.sm-black {
+    color: #000;
+    border: 3px solid #000;
+}
+
+.sm-black:hover {
+    color: #FBBA00;
+    background-color: #000;
+}
+
+.sm-yellow {
+    color: #FBBA00;
+    border: 3px solid #FBBA00;
+}
+
+.sm-yellow:hover {
+    color: #000;
+    background-color: #FBBA00;
+}
+
+/*.sm-button {
     box-sizing: border-box;
     color: #FBBA00;
     cursor: pointer;
@@ -369,16 +346,15 @@ a:hover {
     border-radius: 50px;
     transition: all 0.35s ease;
     display: inline-block;
-}
+}*/
 
-.sm-button:hover {
+/*.sm-button:hover {
     color: #000;
     background-color: #FBBA00;
-}
+}*/
 
 .sm-button-black {
     color: #000;
-    background-color: none;
     border: 3px solid #000;
     border-radius: 50px;
     cursor: pointer;
@@ -404,7 +380,12 @@ a:hover {
     right: 20px;
     bottom: 20px;
     cursor: pointer;
-    transition: all .5s ease;
+    will-change: transform;
+    transition: transform .3s ease;
+}
+
+.scrolltop:hover {
+    transform: translateY(-10px);
 }
 
 .vis {
@@ -416,8 +397,6 @@ a:hover {
     visibility: hidden;
     opacity: 0;
 }
-
-
 
 /*Footer*/
 
@@ -436,21 +415,11 @@ footer {
     will-change: background-position;
 }
 
-/*@keyframes move-city {
-	0% {
-		background-position: 0 bottom 0;
-	}
-	100% {
-		background-position: right 100vw bottom 0;
-	}
-}*/
-
 @media screen and (min-width: 768px) {
     footer {
         background-size: 100%;
     }
 }
-
 
 .contacts {
     display: flex;
@@ -482,8 +451,6 @@ footer {
     transition: all 0.35s ease;
 }
 
-
-
 .footer-contacts>a:hover {
     color: #FBBA00;
 }
@@ -493,7 +460,6 @@ footer {
 .form-button {
     padding-top: 15px;
 }
-
 
 .form {
     background: #000;
@@ -542,26 +508,19 @@ footer {
 
 /*Footer social*/
 
-
 .social {
     font-size: 1.6em;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-    .social {
-        justify-content: space-between;
-    }
-}
-
 .social a {
     padding-right: 40px;
     color: #8d8d8d;
-    transition: all 0.35s ease;
+    transition: color 0.35s ease;
 }
 
 .social a:hover {
@@ -584,25 +543,8 @@ footer {
     color: #8d8d8d;
 }
 
-
 @media screen and (min-width: 768px) {
     .footer-social {
         padding: 15px 100px;
     }
-}
-
-
-
-
-
-
-
-.overlay {
-    background: rgb(255, 255, 255);
-    opacity: 0;
-}
-
-.el-hover:hover {
-    opacity: 1;
-    background: rgb(255, 255, 255);
 }
