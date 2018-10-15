@@ -1,6 +1,7 @@
+// GoTop
 const toTop = document.querySelector('.scrolltop');
-
-const menu = document.querySelector('header');
+// Header
+const header = document.querySelector('header');
 
 // Mobile menu
 const mobMenu = document.querySelector('.mob-menu');
@@ -21,7 +22,7 @@ $('.mob-menu').find('a').on('click', function(e) {
     toggleMobMenu();
 });
 
-toTop.addEventListener('click', scrollToTop);
+
 
 window.onscroll = function() {
     showHideScroll();
@@ -34,6 +35,7 @@ window.onload = function() {
 
 // When the user scrolls down 125px from the top of the document, show the button
 function showHideScroll() {
+
     let offset = window.pageYOffset;
 
     if (offset > 125) {
@@ -47,11 +49,6 @@ function showHideScroll() {
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function scrollToTop() {
-    window.scrollTop = 0;
-}
-
 // Change opacity of top menu on scroll
 function toggleMobMenu(bool) {
     if (bool) {
@@ -63,14 +60,14 @@ function toggleMobMenu(bool) {
     }
 }
 
-// Change opacity of top menu on scroll
+// Change opacity & size of header on scroll
 function toggleMenu(bool) {
     if (bool) {
-        menu.classList.add('menu-scroll');
-        menu.classList.remove('menu-fixed');
+        header.classList.add('header-scroll');
+        header.classList.remove('header-fixed');
     } else {
-        menu.classList.add('menu-fixed');
-        menu.classList.remove('menu-scroll');
+        header.classList.add('header-fixed');
+        header.classList.remove('header-scroll');
     }
 }
 
@@ -87,8 +84,24 @@ $(function() {
         let elementClick = $(this).attr("href"),
             destination = $(elementClick).offset().top;
 
-        $('html, body').animate({ scrollTop: destination }, 800);
+        $('html, body').animate({ scrollTop: destination }, 1000);
 
         return false;
     });
+});
+
+// Submit form
+$('#contactMe').on('submit', function(event) {
+	event.preventDefault();
+
+	// Clean form
+	$(this).trigger('reset');
+
+	// Toggle accordion
+	let accordion = UIkit.accordion(UIkit.$('#formAccordion'));
+
+	accordion.toggleItem(UIkit.$('[data-wrapper]'), true, false);
+
+	// Check
+	UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", {pos:'bottom-center'});
 });
