@@ -3,7 +3,7 @@
 html,
 body {
     margin: 0 auto;
-    max-width: 1680px;
+    max-width: 1920px;
     overflow-x: hidden;
 }
 
@@ -77,8 +77,8 @@ body {
 
 @media screen and (min-width: 768px) {
     .services>div>img {
-        height: 55%;
-        width: 55%;
+        height: 50%;
+        width: 50%;
     }
 }
 
@@ -169,12 +169,13 @@ body {
     bottom: 20px;
     cursor: pointer;
     height: 50px;
-    position: fixed;
+    position: absolute;
     right: 20px;
     transition: transform .3s ease, opacity 1s ease;
     width: 50px;
     will-change: transform;
 }
+
 
 .scrolltop:hover {
     transform: translateY(-10px);
@@ -228,7 +229,7 @@ body {
 
 /*No outlines for a*/
 
-a {
+a, button {
     outline: 0;
     outline-style: none;
     outline-width: 0;
@@ -246,4 +247,38 @@ a:hover {
 
 .yellow-bg {
     background-color: #FBBA00;
+}
+
+/*Services on hover*/
+.services-hover {
+		width: 250px;
+		height: 250px;
+		background: #FBBA00;
+		color: #000;
+}
+
+.scrollright {
+    animation: sr_animate 2s infinite;
+    height: 50px;
+    width: 50px;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.scrollright:hover {
+    animation-play-state: paused;
+}
+
+@keyframes sr_animate {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
 }
