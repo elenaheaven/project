@@ -1,5 +1,7 @@
 var lFollowX = 0,
     lFollowY = 0,
+    winX = $(window).width(),
+    winY = $(window).height(),
     x = 0,
     y = 0,
     friction = 1 / 30;
@@ -22,9 +24,9 @@ function moveBackground() {
 
 $('#home').on('mousemove click', function(e) {
 
-    var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-    var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
-    lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+    var lMouseX = Math.max(-100, Math.min(100, winX / 2 - e.clientX));
+    var lMouseY = Math.max(-100, Math.min(100, winY / 2 - e.clientY));
+    lFollowX = (20 * lMouseX) / 100;
     lFollowY = (10 * lMouseY) / 100;
 
 });
