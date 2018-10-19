@@ -1,14 +1,32 @@
-// GoTop
-const toTop = document.querySelector('.scrolltop');
-// Header
-const header = document.querySelector('header');
+$(window).on('scroll', function() {
+        toggleToTop();
+        toggleHeader();
+    })
+    .on('load', function() {
+        toggleToTop();
+        toggleHeader();
+    });
 
-// Mobile menu
-const mobMenu = document.querySelector('.mob-menu');
-const showMobMenu = document.querySelector('#openMenu');
-const closeMobMenu = document.querySelector('#closeMenu');
+$('.mob-menu').find('a').on('click', function(e) {
+    e.preventDefault();
+    toggleMobMenu();
+});
 
 
+// Toggle scrolltop button
+function toggleToTop() {
+
+    var $toTop = $('#goTop');
+
+    if (window.pageYOffset >= 80) {
+        $toTop.fadeIn('slow');
+
+    } else {
+        $toTop.fadeOut('slow');
+    }
+}
+
+// Show|hide mob menu
 $('#openMenu').on('click', function() {
     toggleMobMenu(1);
 });
@@ -17,58 +35,21 @@ $('#closeMenu').on('click', function() {
     toggleMobMenu();
 });
 
-$('.mob-menu').find('a').on('click', function(e) {
-    e.preventDefault();
-    toggleMobMenu();
-});
-
-
-
-window.onscroll = function() {
-    showHideScroll();
-};
-
-window.onload = function() {
-    showHideScroll();
-};
-
-
-// When the user scrolls down 125px from the top of the document, show the button
-function showHideScroll() {
-
-    let offset = window.pageYOffset;
-
-    if (offset > 75) {
-        toTop.classList.add('vis');
-        toTop.classList.remove('hide');
-        toggleMenu(1);
-    } else {
-        toTop.classList.add('hide');
-        toTop.classList.remove('vis');
-        toggleMenu();
-    }
-}
-
-// Change opacity of top menu on scroll
 function toggleMobMenu(bool) {
+
     if (bool) {
-        mobMenu.classList.add('vis');
-        mobMenu.classList.remove('hide');
+        $('.mob-menu')
+            .css("display", "flex")
+            .hide()
+            .slideDown();
     } else {
-        mobMenu.classList.add('hide');
-        mobMenu.classList.remove('vis');
+        $('.mob-menu').slideUp();
     }
 }
 
 // Change opacity & size of header on scroll
-function toggleMenu(bool) {
-    if (bool) {
-        header.classList.add('header-scroll');
-        header.classList.remove('header-fixed');
-    } else {
-        header.classList.add('header-fixed');
-        header.classList.remove('header-scroll');
-    }
+function toggleHeader() {
+    $('header').toggleClass('header-scroll', window.pageYOffset >= 80);
 }
 
 // Scroll to top
@@ -109,20 +90,17 @@ $('#contactMe').on('submit', function(event) {
 
 // Toggle services on hover
 $(function() {
-
-
     $('.services-container').mouseenter(function() {
 
-        $(this).find('.services-hover').css("display", "flex")
+        $(this)
+            .find('.services-hover').css("display", "flex")
             .hide()
             .fadeIn()
             .find('.services-hover-block > *')
             .addClass('show-services');
 
     }).mouseleave(function() {
-        $(this).find('.services-hover').fadeOut();
+        $(this)
+            .find('.services-hover').fadeOut();
     });
-
-
-
 });

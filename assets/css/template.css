@@ -9,15 +9,8 @@ body {
 
 /*Section Container*/
 .sect-container {
-    /*padding: 30px;*/
     padding: 8vw;
 }
-
-/*@media screen and (min-width: 768px) {
-    .sect-container {
-        padding: 100px;
-    }
-}*/
 
 /*First screen*/
 
@@ -34,8 +27,9 @@ body {
 }
 
 .first-screen-bg {
-    background: linear-gradient(rgba(0, 0, 0, .5) 50px, rgba(0, 0, 0, .2) 150px, transparent 400px) no-repeat, radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed, #FBBA00;
-    background-size: cover, 36px 36px, cover;
+    background: radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed,
+        #FBBA00;
+    background-size: 36px 36px, cover;
     height: calc(100% + 75px);
     position: absolute;
     width: 100%;
@@ -74,7 +68,7 @@ body {
 }
 
 .services-container {
-/*    width: 80%;
+    /*    width: 80%;
     height: 80%;*/
     position: relative;
 }
@@ -98,7 +92,7 @@ body {
 }
 
 .services-hover-block {
-		margin: 0 auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -176,7 +170,6 @@ body {
     animation: sb_animate 2s infinite;
     height: 50px;
     width: 50px;
-    will-change: transform;
 }
 
 .scrollbottom:hover {
@@ -197,19 +190,19 @@ body {
     }
 }
 
-.scrolltop {
+.scroll-top {
     bottom: 20px;
     cursor: pointer;
     height: 50px;
-    position: absolute;
-    right: 20px;
-    transition: transform .3s ease, opacity 1s ease;
+    position: fixed;
+    right: 3vw;
+    transition: transform .3s ease;
     width: 50px;
-    will-change: transform;
+    display: none;
 }
 
 
-.scrolltop:hover {
+.scroll-top:hover {
     transform: translateY(-10px);
 }
 
