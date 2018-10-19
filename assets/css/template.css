@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    padding-top: 75px;
+    padding-top: 80px;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -30,9 +30,9 @@ body {
     background: radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed,
         #FBBA00;
     background-size: 36px 36px, cover;
-    height: calc(100% + 75px);
+    height: 130%;
     position: absolute;
-    width: 100%;
+    width: 130%;
     z-index: -1;
 }
 

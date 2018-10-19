@@ -8,7 +8,7 @@ function moveBackground() {
     x += (lFollowX - x) * friction;
     y += (lFollowY - y) * friction;
 
-    translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+    var translate = 'translate(' + x*2 + 'px, ' + y*2 + 'px)';
 
     // Animate background
     $('.first-screen-bg').css({
