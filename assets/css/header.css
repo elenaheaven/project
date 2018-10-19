@@ -5,7 +5,8 @@ header {
     left: 0;
     margin: auto;
     max-width: 1920px;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
+    padding: 0 8vw;
     position: fixed;
     right: 0;
     top: 0;
@@ -29,8 +30,8 @@ header {
 }
 
 
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {
     header {
         padding: 0 100px;
     }
-}
+}*/
