@@ -1,5 +1,4 @@
 header {
-		background-color: rgba(45, 45, 45, .8);
     box-sizing: border-box;
     display: flex;
     height: 75px;
@@ -16,7 +15,7 @@ header {
 /*Header effect on scroll*/
 
 .header-fixed {
-    background-color: rgba(45, 45, 45, .8);
+    background-color: none;
     text-shadow: 2px 2px 3px rgba(0,0,0,.5);
 		height: 75px;
     transition: all .5s ease;

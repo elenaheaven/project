@@ -38,7 +38,7 @@ function showHideScroll() {
 
     let offset = window.pageYOffset;
 
-    if (offset > 125) {
+    if (offset > 75) {
         toTop.classList.add('vis');
         toTop.classList.remove('hide');
         toggleMenu(1);
@@ -92,16 +92,37 @@ $(function() {
 
 // Submit form
 $('#contactMe').on('submit', function(event) {
-	event.preventDefault();
+    event.preventDefault();
 
-	// Clean form
-	$(this).trigger('reset');
+    // Clean form
+    $(this).trigger('reset');
 
-	// Toggle accordion
-	let accordion = UIkit.accordion(UIkit.$('#formAccordion'));
+    // Toggle accordion
+    let accordion = UIkit.accordion(UIkit.$('#formAccordion'));
 
-	accordion.toggleItem(UIkit.$('[data-wrapper]'), true, false);
+    accordion.toggleItem(UIkit.$('[data-wrapper]'), true, false);
 
-	// Check
-	UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", {pos:'bottom-center'});
+    // Check
+    UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", { pos: 'bottom-center' });
+});
+
+
+// Toggle services on hover
+$(function() {
+
+
+    $('.services-container').mouseenter(function() {
+
+        $(this).find('.services-hover').css("display", "flex")
+            .hide()
+            .fadeIn()
+            .find('.services-hover-block > *')
+            .addClass('show-services');
+
+    }).mouseleave(function() {
+        $(this).find('.services-hover').fadeOut();
+    });
+
+
+
 });

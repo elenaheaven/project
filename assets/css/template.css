@@ -33,14 +33,18 @@ body {
 }
 
 .first-screen-bg {
-    background: radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed, #FBBA00;
-    background-size: 36px 36px, cover;
+    background: linear-gradient(rgba(0, 0, 0, .5) 50px, rgba(0, 0, 0, .2) 150px, transparent 400px) no-repeat, radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed, #FBBA00;
+    background-size: cover, 36px 36px, cover;
     height: calc(100% + 75px);
     position: absolute;
     width: 100%;
-    will-change: transform;
     z-index: -1;
 }
+
+.first-screen-bg:hover {
+    will-change: transform;
+}
+
 
 .name {
     color: #fff;
@@ -48,6 +52,7 @@ body {
     font-size: 5em;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
     text-transform: uppercase;
+    pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -58,34 +63,61 @@ body {
 
 .gaslo {
     margin-top: -20px;
+    pointer-events: none;
 }
 
 /*Services*/
 
 .services {
-    align-items: flex-start;
+    margin: 100px auto 0;
+}
+
+.services-container {
+/*    width: 80%;
+    height: 80%;*/
+    position: relative;
+}
+
+.services-container:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+/*Services on hover*/
+.services-hover {
+    background-color: #fff;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
-.services>div>img {
-    height: 65%;
-    width: 65%;
+.services-hover-block {
+		margin: 0 auto;
+    text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-    .services>div>img {
-        height: 50%;
-        width: 50%;
+.show-services {
+    animation: sweep 1s ease-in-out;
+}
+
+@keyframes sweep {
+    0% {
+        margin-left: -10px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0;
+        opacity: 1;
     }
 }
 
-.services :hover {
-    color: #000;
-    cursor: pointer
-}
 
 /*Preview Portfolio*/
 
@@ -115,9 +147,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-	.home-design-txt {
-	    font-size: 5em;
-	}
+    .home-design-txt {
+        font-size: 5em;
+    }
 }
 
 /*About Us*/
@@ -229,7 +261,8 @@ body {
 
 /*No outlines for a*/
 
-a, button {
+a,
+button {
     outline: 0;
     outline-style: none;
     outline-width: 0;
@@ -249,13 +282,7 @@ a:hover {
     background-color: #FBBA00;
 }
 
-/*Services on hover*/
-.services-hover {
-		width: 250px;
-		height: 250px;
-		background: #FBBA00;
-		color: #000;
-}
+
 
 .scrollright {
     animation: sr_animate 2s infinite;
